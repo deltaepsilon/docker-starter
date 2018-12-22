@@ -1,0 +1,15 @@
+version: '3'
+services:
+  deploy:
+    build: .
+    env_file: ./dev/env.list
+  dev:
+    build: ./dev
+    env_file: ./dev/env.list
+    ports:
+     - "1234:1234"
+     - "8080:8080"
+     - "9229:9229"
+    volumes:
+      - "./app:/app"
+  

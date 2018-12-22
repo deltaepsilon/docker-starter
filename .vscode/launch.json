@@ -1,0 +1,20 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  // https://blog.risingstack.com/how-to-debug-a-node-js-app-in-a-docker-container/
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Tests in Docker",
+      "preLaunchTask": "test:debug",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/app",
+      "remoteRoot": "/app",
+      "protocol": "inspector"
+    }
+  ]
+}
